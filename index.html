@@ -136,19 +136,29 @@ audio{
                 <img src="./images/Alpha/page4.svg" id="p4" alt="">
             </div>
             <button id="button" onclick="sendEmail()">Click on this</button>
-    <script type="text/javascript" src="https://github.com/Sadan-max/neww/blob/main/script.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
+        window.onload = function(){
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
+    var baloons = document.querySelector(".heartBaloons");
+    baloons.style.top = "-170vh";
+};
+function sendEmail(){
+    emailjs.send("service_h7y6769","template_xgodgrc").then(alert("Apna email check kro"))
+};
     (function(){
         emailjs.init({
             publicKey: "Cq46apR5YcHf0rxO6",
         });
     })();
     </script>
+    
 </body>
 </html>
+
 
 
 
